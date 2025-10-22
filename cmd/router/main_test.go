@@ -106,7 +106,7 @@ func TestSimpleModelChainer(t *testing.T) {
 						InferenceTarget: v1alpha1.InferenceTarget{
 							ServiceURL: model2Url.String(),
 						},
-						Data: "$response",
+						Data: "$response.predictions",
 					},
 				},
 			},
@@ -974,7 +974,7 @@ func TestServerTimeout(t *testing.T) {
 								InferenceTarget: v1alpha1.InferenceTarget{
 									ServiceURL: model2Url.String(),
 								},
-								Data: "$response",
+								Data: "$response.predictions",
 							},
 						},
 					},
